@@ -199,7 +199,7 @@ npx expo run:ios
 
 #### Make dynamic message with tags
 
-####
+#### Priorities and Notification Channels
 
 ####
 

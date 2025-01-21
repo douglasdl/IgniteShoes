@@ -201,11 +201,15 @@ npx expo run:ios
 
 #### Priorities and Notification Channels
 
-####
+#### Create Notification Channels on Android
 
-####
+#### Send a message by a channel
 
 #### Foreground concept
+
+- Foreground
+- Background
+- Quit
 
 ####
 

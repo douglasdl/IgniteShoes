@@ -260,5 +260,6 @@ npx gluestack-ui add spinner
 npx gluestack-ui add button
 npx gluestack-ui add input
 npx gluestack-ui add pressable
+npx gluestack-ui add avatar
 npx gluestack-ui add image
 ```

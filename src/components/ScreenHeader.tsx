@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
-import { Box, Heading, Icon } from 'native-base'
+import { Heading, Icon } from 'native-base'
+import { Box } from '@/components/ui/box'
 import { HStack } from "@/components/ui/hstack"
 import { Pressable } from 'react-native'
 import { Feather } from '@expo/vector-icons'
@@ -22,7 +23,7 @@ export function ScreenHeader({ title }: Props) {
         {title}
       </Heading>
 
-      <Box w={6} h={6} />
+      <Box className='w-6 h-6' />
     </HStack>
   )
 }

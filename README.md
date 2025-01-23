@@ -246,3 +246,11 @@ eas submit --platform ios
 
 eas update --branch preview --message "update details"
 ```
+
+## Migrate to Gluestack UI
+
+```sh
+npx gluestack-ui add vstack
+npx gluestack-ui add hstack
+npx gluestack-ui add box
+```

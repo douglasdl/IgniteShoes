@@ -1,18 +1,19 @@
-import { Platform } from 'react-native';
-import { useEffect, useState } from 'react';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import { Heading, Image, ScrollView, Text, useToast, HStack } from 'native-base';
+import { Platform } from 'react-native'
+import { useEffect, useState } from 'react'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { Heading, Image, ScrollView, Text, useToast } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
+import { HStack } from "@/components/ui/hstack"
 
-import { useCart } from '../hooks/useCart';
+import { useCart } from '../hooks/useCart'
 
-import { PRODUCTS } from '../data/products';
-import { Sizes } from '../components/Sizes';
+import { PRODUCTS } from '../data/products'
+import { Sizes } from '../components/Sizes'
 
-import { Input } from '../components/Input';
-import { Button } from '../components/Button';
-import { ScreenHeader } from '../components/ScreenHeader';
-import { ProductCardProps } from '../components/ProductCard';
+import { Input } from '../components/Input'
+import { Button } from '../components/Button'
+import { ScreenHeader } from '../components/ScreenHeader'
+import { ProductCardProps } from '../components/ProductCard'
 
 type RouteParamsProps = {
   productId: string
@@ -77,7 +78,7 @@ export function Details() {
         />
 
         <VStack className='p-6'>
-          <HStack w="full" justifyContent="space-between" alignItems="center">
+          <HStack className='w-full justify-between items-center'>
             <VStack>
               <Heading color="white" fontFamily="heading" fontSize="xl">
                 {product.name}

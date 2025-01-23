@@ -1,27 +1,20 @@
-import { HStack, Text, IconButton, CloseIcon, Icon } from 'native-base';
-import { Ionicons } from '@expo/vector-icons';
+import { Text, IconButton, CloseIcon, Icon } from 'native-base'
+import { HStack } from "@/components/ui/hstack"
+import { Ionicons } from '@expo/vector-icons'
+import { OSNotification } from 'react-native-onesignal'
 
 type Props = {
-  title: string;
-  onClose: () => void;
+  data: OSNotification
+  onClose: () => void
 }
 
-export function Notification({ title, onClose }: Props) {
+export function Notification({ data, onClose }: Props) {
   return (
-    <HStack 
-      w="full" 
-      p={4} 
-      pt={12}
-      justifyContent="space-between" 
-      alignItems="center" 
-      bgColor="gray.200"
-      position="absolute"
-      top={0}
-    >
+    <HStack className='w-full p-4 pt-12 justify-between items-center bg-gray-200 absolute top-0'>
         <Icon as={Ionicons} name="notifications-outline" size={5} color="black" mr={2}/>
 
         <Text fontSize="md" color="black" flex={1}>
-          {title}
+          {data.title}
         </Text>
 
       <IconButton 
@@ -33,5 +26,5 @@ export function Notification({ title, onClose }: Props) {
         onPress={onClose}
       />
     </HStack>
-  );
+  )
 }

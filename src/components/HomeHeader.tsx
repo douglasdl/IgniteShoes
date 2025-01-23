@@ -1,12 +1,13 @@
-import { Feather } from '@expo/vector-icons';
-import { Heading, HStack, Icon, Text, Avatar } from "native-base";
+import { Feather } from '@expo/vector-icons'
+import { Heading, Icon, Text, Avatar } from "native-base"
+import { HStack } from "@/components/ui/hstack"
 
 import userPhotoDefault from "../assets/userPhotoDefault.png";
 import { VStack } from '@/components/ui/vstack'
 
 export function HomeHeader() {
   return (
-    <HStack pt={16} pb={5} px={8} bg="gray.600" alignItems="center">
+    <HStack className='pt-16 pb-5 px-8 bg-gray-600 items-center'>
       <Avatar
         source={userPhotoDefault}
         size={16}

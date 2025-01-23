@@ -1,17 +1,18 @@
-import { useNavigation } from '@react-navigation/native';
-import { Box, Heading, HStack, Icon } from 'native-base';
-import { Pressable } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'
+import { Box, Heading, Icon } from 'native-base'
+import { HStack } from "@/components/ui/hstack"
+import { Pressable } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
 type Props = {
-  title: string;
+  title: string
 }
 
 export function ScreenHeader({ title }: Props) {
   const { goBack } = useNavigation();
 
   return (
-    <HStack bg="gray.600" pb={6} pt={16} justifyContent="space-between" px={6}>
+    <HStack className='bg-gray-600 pb-6 pt-16 justify-between px-6'>
       <Pressable onPress={goBack}>
         <Icon as={Feather} name="arrow-left" size={6} color="green.500" />
       </Pressable>
@@ -23,5 +24,5 @@ export function ScreenHeader({ title }: Props) {
 
       <Box w={6} h={6} />
     </HStack>
-  );
+  )
 }

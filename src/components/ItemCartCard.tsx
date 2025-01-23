@@ -1,15 +1,16 @@
 import { Feather } from '@expo/vector-icons'
 import { Platform, TouchableOpacity } from 'react-native'
-import { Image, Text, Icon } from 'native-base'
+import { Image, Icon } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
+import { Text } from '@/components/ui/text'
 
 import { StorageCartProps } from '../storage/storageCart'
 
 type Props = {
-  onRemove: () => void;
-  data: StorageCartProps;
+  onRemove: () => void
+  data: StorageCartProps
 }
 
 export function ItemCartCard({ data, onRemove }: Props) {
@@ -22,7 +23,7 @@ export function ItemCartCard({ data, onRemove }: Props) {
           {data.name}
         </Heading>
 
-        <Text color="gray.200" fontSize="sm">
+        <Text className='text-gray-200' size="sm">
           {data.quantity} unidades
         </Text>
       </VStack>

@@ -1,6 +1,6 @@
-import { Text } from 'native-base'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
+import { Text } from '@/components/ui/text'
 
 type Props = {
   title: string
@@ -14,7 +14,7 @@ export function HeaderList({ title, counter }: Props) {
         {title}
       </Heading>
 
-      <Text color="gray.200" fontSize="sm">
+      <Text className="text-gray-200" size="sm">
         {counter}
       </Text>
     </HStack>

@@ -1,7 +1,8 @@
 import { ImageSourcePropType, TouchableOpacity, TouchableOpacityProps } from 'react-native'
-import { Image, Text } from 'native-base'
+import { Image } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
 import { Heading } from '@/components/ui/heading'
+import { Text } from '@/components/ui/text'
 
 export type ProductCardProps = {
   id: string
@@ -29,7 +30,7 @@ export function ProductCard({ data, ...rest }: Props) {
           {data.name}
         </Heading>
 
-        <Text color="gray.200" fontSize="sm">
+        <Text className='text-gray-200' size="sm">
           R$ {data.price}
         </Text>
       </VStack>

@@ -255,4 +255,5 @@ npx gluestack-ui add center
 npx gluestack-ui add hstack
 npx gluestack-ui add vstack
 npx gluestack-ui add heading
+npx gluestack-ui add text
 ```

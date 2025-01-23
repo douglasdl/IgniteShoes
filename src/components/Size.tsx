@@ -1,8 +1,9 @@
-import { Pressable, IPressableProps, Text } from 'native-base';
+import { Pressable, IPressableProps } from 'native-base'
+import { Text } from '@/components/ui/text'
 
 type Props = IPressableProps & {
-  size: string;
-  isActive: boolean;
+  size: string
+  isActive: boolean
 }
 
 export function Size({ size, isActive, ...rest }: Props) {
@@ -23,9 +24,9 @@ export function Size({ size, isActive, ...rest }: Props) {
       }}
       {...rest}
     >
-      <Text color={isActive ? "green.500" : "gray.200"} fontSize="xs">
+      <Text className={isActive ? "text-green-500" : "text-gray-200"} size="xs">
         {size}
       </Text>
     </Pressable>
-  );
+  )
 }

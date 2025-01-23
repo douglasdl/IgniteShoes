@@ -1,10 +1,11 @@
 import { Platform } from 'react-native'
 import { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { Image, ScrollView, Text, useToast } from 'native-base'
+import { Image, ScrollView, useToast } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
+import { Text } from '@/components/ui/text'
 
 import { useCart } from '../hooks/useCart'
 
@@ -85,13 +86,13 @@ export function Details() {
                 {product.name}
               </Heading>
 
-              <Text color="gray.200" fontSize="md" fontFamily="heading">
+              <Text className='text-gray-200' size="md">
                 R$ {product.price}
               </Text>
             </VStack>
 
             <VStack className='items-end'>
-              <Text color="gray.200" fontSize="sm" textAlign="justify" pt={2}>
+              <Text className='text-gray-200 text-justify pt-2' size="sm">
                 Quantidade
               </Text>
 
@@ -105,7 +106,7 @@ export function Details() {
             </VStack>
           </HStack>
 
-          <Text color="gray.200" fontSize="md" textAlign="justify" pt={2}>
+          <Text className='text-gray-200 text-justify pt-2' size="md">
             {product.description}
           </Text>
 
@@ -115,5 +116,5 @@ export function Details() {
         </VStack>
       </ScrollView>
     </VStack>
-  );
+  )
 }

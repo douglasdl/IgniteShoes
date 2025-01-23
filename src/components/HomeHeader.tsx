@@ -1,7 +1,8 @@
 import { Feather } from '@expo/vector-icons';
-import { Heading, HStack, Icon, Text, VStack, Avatar } from "native-base";
+import { Heading, HStack, Icon, Text, Avatar } from "native-base";
 
 import userPhotoDefault from "../assets/userPhotoDefault.png";
+import { VStack } from '@/components/ui/vstack'
 
 export function HomeHeader() {
   return (
@@ -14,7 +15,7 @@ export function HomeHeader() {
         borderColor="gray.400"
       />
 
-      <VStack flex={1}>
+      <VStack className='flex-1'>
         <Text color="gray.100" fontSize="md">
           Olá,
         </Text>

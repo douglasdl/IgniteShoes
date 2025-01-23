@@ -1,5 +1,6 @@
-import { HeaderList } from './HeaderList';
-import { FlatList, VStack, useToast } from 'native-base';
+import { HeaderList } from './HeaderList'
+import { FlatList, useToast } from 'native-base'
+import { VStack } from '@/components/ui/vstack'
 
 import { useCart } from '../hooks/useCart';
 
@@ -30,7 +31,7 @@ export function ItemsCart() {
   }
 
   return (
-    <VStack flex={1}>
+    <VStack className='flex-1'>
       <HeaderList title="Produtos" counter={cart.length} />
 
       <FlatList

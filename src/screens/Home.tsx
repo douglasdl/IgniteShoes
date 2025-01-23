@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { VStack } from 'native-base';
+import { useEffect, useState } from 'react'
+import { VStack } from '@/components/ui/vstack'
 
 import { PRODUCTS } from '../data/products';
 
@@ -19,7 +19,7 @@ export function Home() {
   }, [brandSelected])
 
   return (
-    <VStack flex={1}>
+    <VStack className='flex-1'>
       <HomeHeader />
       <Brands onSelect={setBrandSelected} selected={brandSelected} />
       <Products brand={brandSelected} data={products} />

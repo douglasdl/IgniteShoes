@@ -1,7 +1,8 @@
 import { Platform } from 'react-native';
 import { useEffect, useState } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { Heading, Image, ScrollView, Text, VStack, useToast, HStack } from 'native-base';
+import { Heading, Image, ScrollView, Text, useToast, HStack } from 'native-base';
+import { VStack } from '@/components/ui/vstack'
 
 import { useCart } from '../hooks/useCart';
 
@@ -14,7 +15,7 @@ import { ScreenHeader } from '../components/ScreenHeader';
 import { ProductCardProps } from '../components/ProductCard';
 
 type RouteParamsProps = {
-  productId: string;
+  productId: string
 }
 
 export function Details() {
@@ -61,7 +62,7 @@ export function Details() {
   }, [productId]);
 
   return (
-    <VStack flex={1}>
+    <VStack className='flex-1'>
       <ScreenHeader title="Detalhes do Produto" />
 
       <ScrollView>
@@ -75,7 +76,7 @@ export function Details() {
           alignSelf="center"
         />
 
-        <VStack p={6}>
+        <VStack className='p-6'>
           <HStack w="full" justifyContent="space-between" alignItems="center">
             <VStack>
               <Heading color="white" fontFamily="heading" fontSize="xl">
@@ -87,7 +88,7 @@ export function Details() {
               </Text>
             </VStack>
 
-            <VStack alignItems="flex-end">
+            <VStack className='items-end'>
               <Text color="gray.200" fontSize="sm" textAlign="justify" pt={2}>
                 Quantidade
               </Text>

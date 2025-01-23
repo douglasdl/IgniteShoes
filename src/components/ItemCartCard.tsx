@@ -1,6 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import { Platform, TouchableOpacity } from 'react-native';
-import { HStack, Image, Heading, Text, VStack, Icon } from 'native-base';
+import { HStack, Image, Heading, Text, Icon } from 'native-base'
+import { VStack } from '@/components/ui/vstack'
 
 import { StorageCartProps } from '../storage/storageCart';
 
@@ -14,7 +15,7 @@ export function ItemCartCard({ data, onRemove }: Props) {
     <HStack w="full" h={20} bgColor="gray.500" rounded="md" alignItems="center" px={4} mb={2}>
       <Image w={16} h={16} source={data.image} alt="Imagem do produto" resizeMode={Platform.OS === "android" ? "contain" : "cover"} />
 
-      <VStack flex={1} ml={2}>
+      <VStack className='flex-1 ml-2'>
         <Heading color="white" fontFamily="heading" fontSize="lg" mt={2}>
           {data.name}
         </Heading>

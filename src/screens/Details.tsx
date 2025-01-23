@@ -1,9 +1,10 @@
 import { Platform } from 'react-native'
 import { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { Heading, Image, ScrollView, Text, useToast } from 'native-base'
+import { Image, ScrollView, Text, useToast } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
+import { Heading } from '@/components/ui/heading'
 
 import { useCart } from '../hooks/useCart'
 
@@ -80,7 +81,7 @@ export function Details() {
         <VStack className='p-6'>
           <HStack className='w-full justify-between items-center'>
             <VStack>
-              <Heading color="white" fontFamily="heading" fontSize="xl">
+              <Heading className='text-white' size="xl">
                 {product.name}
               </Heading>
 

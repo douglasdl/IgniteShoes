@@ -1,6 +1,7 @@
 import { Feather } from '@expo/vector-icons'
-import { Heading, Icon, Text, Avatar } from "native-base"
+import { Icon, Text, Avatar } from "native-base"
 import { HStack } from "@/components/ui/hstack"
+import { Heading } from '@/components/ui/heading'
 
 import userPhotoDefault from "../assets/userPhotoDefault.png";
 import { VStack } from '@/components/ui/vstack'
@@ -21,7 +22,7 @@ export function HomeHeader() {
           Olá,
         </Text>
 
-        <Heading color="gray.100" fontSize="md" fontFamily="heading">
+        <Heading className='text-gray-100' size="md">
           Douglas Dias Leal
         </Heading>
       </VStack>

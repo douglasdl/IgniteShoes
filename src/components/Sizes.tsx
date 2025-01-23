@@ -1,5 +1,6 @@
-import { FlatList, Heading } from 'native-base'
+import { FlatList } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
+import { Heading } from '@/components/ui/heading'
 
 import { Size } from './Size';
 
@@ -12,7 +13,7 @@ export function Sizes({ onSelect, selected }: Props) {
 
   return (
     <VStack className='my-8'>
-      <Heading fontFamily="heading" fontSize="md" color="gray.200" mb={3}>
+      <Heading className='text-gray-200 mb-3' size="md" >
         Tamanhos
       </Heading>
 

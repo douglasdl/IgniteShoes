@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
-import { Heading, Icon } from 'native-base'
+import { Icon } from 'native-base'
+import { Heading } from '@/components/ui/heading'
 import { Box } from '@/components/ui/box'
 import { HStack } from "@/components/ui/hstack"
 import { Pressable } from 'react-native'
@@ -19,7 +20,7 @@ export function ScreenHeader({ title }: Props) {
       </Pressable>
 
 
-      <Heading color="gray.100" fontSize="xl">
+      <Heading className='text-gray-100' size="xl">
         {title}
       </Heading>
 

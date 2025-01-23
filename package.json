@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.2",
+    "@expo/html-elements": "^0.4.2",
     "@gluestack-ui/icon": "^0.1.25",
     "@gluestack-ui/nativewind-utils": "^1.0.26",
     "@gluestack-ui/overlay": "^0.1.16",
@@ -19,6 +20,7 @@
     "@react-navigation/native": "^6.0.13",
     "babel-plugin-module-resolver": "^5.0.2",
     "expo": "~52.0.25",
+    "expo-dev-client": "~5.0.9",
     "expo-font": "~13.0.3",
     "expo-status-bar": "~2.0.1",
     "expo-updates": "~0.26.12",
@@ -35,8 +37,7 @@
     "react-native-screens": "~4.4.0",
     "react-native-svg": "^15.8.0",
     "react-native-web": "~0.19.13",
-    "tailwindcss": "^3.4.17",
-    "expo-dev-client": "~5.0.9"
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

@@ -1,6 +1,7 @@
 import { ImageSourcePropType, TouchableOpacity, TouchableOpacityProps } from 'react-native'
-import { Image, Heading, Text } from 'native-base'
+import { Image, Text } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
+import { Heading } from '@/components/ui/heading'
 
 export type ProductCardProps = {
   id: string
@@ -24,7 +25,7 @@ export function ProductCard({ data, ...rest }: Props) {
       <VStack className='w-40 h-40 bg-gray-500 rounded-md items-center p-2 m-2'>
         <Image source={data.thumb} alt="Imagem do produto" flex={1} resizeMode="cover" />
 
-        <Heading color="white" fontFamily="heading" fontSize="lg" mt={2}>
+        <Heading className='text-white mt-2' size="lg">
           {data.name}
         </Heading>
 

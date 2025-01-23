@@ -1,5 +1,6 @@
-import { Heading, Text } from 'native-base'
+import { Text } from 'native-base'
 import { HStack } from "@/components/ui/hstack"
+import { Heading } from '@/components/ui/heading'
 
 type Props = {
   title: string
@@ -9,7 +10,7 @@ type Props = {
 export function HeaderList({ title, counter }: Props) {
   return (
     <HStack className="w-full justify-between items-center px-8 mt-6">
-      <Heading fontFamily="heading" color="gray.200" fontSize="md">
+      <Heading className='text-gray-200 font' size="md">
         {title}
       </Heading>
 

@@ -6,5 +6,5 @@ export function Loading() {
     <Center className='flex-1 bg-gray-700'>
       <Spinner color="green.500" />
     </Center>
-  );
+  )
 }

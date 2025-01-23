@@ -1,5 +1,5 @@
 import { ImageSourcePropType, TouchableOpacity, TouchableOpacityProps } from 'react-native'
-import { Image } from 'native-base'
+import { Image } from '@/components/ui/image'
 import { VStack } from '@/components/ui/vstack'
 import { Heading } from '@/components/ui/heading'
 import { Text } from '@/components/ui/text'
@@ -24,7 +24,12 @@ export function ProductCard({ data, ...rest }: Props) {
   return (
     <TouchableOpacity {...rest}>
       <VStack className='w-40 h-40 bg-gray-500 rounded-md items-center p-2 m-2'>
-        <Image source={data.thumb} alt="Imagem do produto" flex={1} resizeMode="cover" />
+        <Image 
+          source={data.thumb} 
+          alt="Imagem do produto" 
+          className='flex-1' 
+          resizeMode="cover" 
+        />
 
         <Heading className='text-white mt-2' size="lg">
           {data.name}
@@ -35,5 +40,5 @@ export function ProductCard({ data, ...rest }: Props) {
         </Text>
       </VStack>
     </TouchableOpacity>
-  );
+  )
 }

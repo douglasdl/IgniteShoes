@@ -1,11 +1,12 @@
 import { Platform } from 'react-native'
 import { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { Image, ScrollView, useToast } from 'native-base'
+import { ScrollView, useToast } from 'native-base'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
 import { Text } from '@/components/ui/text'
+import { Image } from '@/components/ui/image'
 
 import { useCart } from '../hooks/useCart'
 
@@ -72,11 +73,9 @@ export function Details() {
         <Image
           key={String(new Date().getTime())}
           source={product.image}
-          w={56}
-          h={56}
+          className='w-56 h-56 self-center'
           resizeMode={Platform.OS === "android" ? "contain" : "cover"}
           alt="Imagem do produto"
-          alignSelf="center"
         />
 
         <VStack className='p-6'>

@@ -1,6 +1,7 @@
 import { ImageSourcePropType, Platform } from 'react-native'
-import { IPressableProps, Image } from 'native-base'
+import { IPressableProps } from 'native-base'
 import { Pressable } from "@/components/ui/pressable"
+import { Image } from '@/components/ui/image'
 
 type Props = IPressableProps & {
   image: ImageSourcePropType
@@ -16,8 +17,7 @@ export function Brand({ image, isActive, ...rest }: Props) {
       <Image
         source={image}
         alt="Brand image"
-        w={20}
-        h={7}
+        className='w-20 h-7'
         resizeMode={Platform.OS === "android" ? "contain" : "cover"}
       />
     </Pressable>

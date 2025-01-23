@@ -5,7 +5,7 @@ import { VStack } from '@/components/ui/vstack'
 import { useCart } from '../hooks/useCart';
 
 import { ItemCartCard } from './ItemCartCard';
-import { Button } from '../components/Button';
+import { Button } from '../components/Button'
 
 export function ItemsCart() {
   const { cart, removeProductCart } = useCart();
@@ -51,11 +51,7 @@ export function ItemsCart() {
 
       {
         cart.length > 0 &&
-        <Button
-          title="Finalizar compra"
-          mx={8}
-          my={3}
-        />
+        <Button title="Finalizar compra" />
       }
     </VStack>
   );

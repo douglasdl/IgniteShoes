@@ -112,7 +112,10 @@ export function Details() {
 
           <Sizes onSelect={setSize} selected={size} />
 
-          <Button title="Adicionar no carrinho" onPress={handleAddProductToCart} />
+          <Button 
+            title="Adicionar no carrinho" 
+            onPress={handleAddProductToCart}
+          />
         </VStack>
       </ScrollView>
     </VStack>

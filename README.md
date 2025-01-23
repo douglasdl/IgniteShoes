@@ -258,4 +258,5 @@ npx gluestack-ui add heading
 npx gluestack-ui add text
 npx gluestack-ui add spinner
 npx gluestack-ui add button
+npx gluestack-ui add input
 ```

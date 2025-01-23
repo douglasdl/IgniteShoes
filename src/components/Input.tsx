@@ -1,20 +1,11 @@
-import { Input as NativeBaseInput, IInputProps } from 'native-base';
+import { Input as GuestackInput } from '@/components/ui/input'
+import { IInputProps } from '@gluestack-ui/input/lib/types';
 
 export function Input({ ...rest }: IInputProps) {
   return (
-    <NativeBaseInput
-      bg="gray.800"
-      h={14}
-      px={4}
-      borderColor="gray.600"
-      fontSize="md"
-      fontFamily="body"
-      color="white"
-      placeholderTextColor="gray.300"
-      _focus={{
-        bg: "gray.800",
-        borderColor: "gray.600"
-      }}
+    <GuestackInput 
+      className='bg-gray-800 h-14 px-4 border-gray-600 text-white focus:bg-gray-800 focus:border-gray-600'
+      size="md"
       {...rest}
     />
   );

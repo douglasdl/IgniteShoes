@@ -250,7 +250,8 @@ eas update --branch preview --message "update details"
 ## Migrate to Gluestack UI
 
 ```sh
-npx gluestack-ui add vstack
-npx gluestack-ui add hstack
 npx gluestack-ui add box
+npx gluestack-ui add center
+npx gluestack-ui add hstack
+npx gluestack-ui add vstack
 ```

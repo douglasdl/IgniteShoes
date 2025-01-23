@@ -1,27 +1,16 @@
-import { ImageSourcePropType, Platform } from 'react-native';
-import { Pressable, IPressableProps, Image } from 'native-base';
+import { ImageSourcePropType, Platform } from 'react-native'
+import { IPressableProps, Image } from 'native-base'
+import { Pressable } from "@/components/ui/pressable"
 
 type Props = IPressableProps & {
-  image: ImageSourcePropType;
-  isActive: boolean;
+  image: ImageSourcePropType
+  isActive: boolean
 }
 
 export function Brand({ image, isActive, ...rest }: Props) {
   return (
     <Pressable
-      mr={3}
-      w={24}
-      h={10}
-      bg="gray.600"
-      rounded="md"
-      justifyContent="center"
-      alignItems="center"
-      overflow="hidden"
-      isPressed={isActive}
-      _pressed={{
-        borderColor: "green.500",
-        borderWidth: 1
-      }}
+      className={`mr-3 w-24 h-10 rounded-md justify-center items-center overflow-hidden ${isActive ? "border border-green-500" : "bg-gray-600"}`}
       {...rest}
     >
       <Image
@@ -32,5 +21,5 @@ export function Brand({ image, isActive, ...rest }: Props) {
         resizeMode={Platform.OS === "android" ? "contain" : "cover"}
       />
     </Pressable>
-  );
+  )
 }

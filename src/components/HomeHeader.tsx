@@ -1,10 +1,10 @@
-import { Feather } from '@expo/vector-icons'
-import { Icon } from "native-base"
+import { Icon } from '@/components/ui/icon'
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
 import { VStack } from '@/components/ui/vstack'
 import { Text } from '@/components/ui/text'
+import { LogOut } from "lucide-react-native"
 
 import userPhotoDefault from "../assets/userPhotoDefault.png"
 
@@ -26,10 +26,9 @@ export function HomeHeader() {
       </VStack>
 
       <Icon
-        as={Feather}
-        name="log-out"
-        color="gray.200"
-        size={7}
+        as={LogOut}
+        color="gray-200"
+        size="lg"
       />
     </HStack>
   )

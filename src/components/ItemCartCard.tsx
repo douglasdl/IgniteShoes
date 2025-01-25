@@ -1,6 +1,5 @@
-import { Feather } from '@expo/vector-icons'
 import { Platform, TouchableOpacity } from 'react-native'
-import { Icon } from 'native-base'
+import { Icon, TrashIcon } from '@/components/ui/icon'
 import { Image } from '@/components/ui/image'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
@@ -35,7 +34,7 @@ export function ItemCartCard({ data, onRemove }: Props) {
       </VStack>
 
       <TouchableOpacity onPress={onRemove}>
-        <Icon as={Feather} name="trash" size={6} color="red.500" />
+        <Icon as={TrashIcon} size="xs" color="red-500" />
       </TouchableOpacity>
     </HStack>
   );

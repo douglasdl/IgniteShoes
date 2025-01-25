@@ -1,11 +1,12 @@
-import { Ionicons, Feather } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Icon } from '@/components/ui/icon'
+import { HomeIcon, ShoppingBag } from "lucide-react-native"
 
-import { useTheme } from 'native-base';
+import { useTheme } from 'native-base'
 
-import { Cart } from '../screens/Cart';
-import { Home } from '../screens/Home';
-import { Details } from '../screens/Details';
+import { Cart } from '../screens/Cart'
+import { Home } from '../screens/Home'
+import { Details } from '../screens/Details'
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ export function AppRoutes() {
         name="products"
         component={Home}
         options={{
-          tabBarIcon: ({ color }) => <Ionicons name="home-outline" color={color} size={sizes[6]} />
+          tabBarIcon: ({ color }) => <Icon as={HomeIcon} color={color} size="md" />
         }}
       />
 
@@ -36,7 +37,7 @@ export function AppRoutes() {
         name="cart"
         component={Cart}
         options={{
-          tabBarIcon: ({ color }) => <Feather name="shopping-bag" color={color} size={sizes[6]} />,
+          tabBarIcon: ({ color }) => <Icon as={ShoppingBag} color={color} size="md" />,
         }}
       />
 

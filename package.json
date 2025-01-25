@@ -30,6 +30,7 @@
     "expo-font": "~13.0.3",
     "expo-status-bar": "~2.0.1",
     "expo-updates": "~0.26.12",
+    "lucide-react-native": "^0.474.0",
     "native-base": "^3.4.22",
     "nativewind": "^4.1.23",
     "onesignal-expo-plugin": "^2.0.3",

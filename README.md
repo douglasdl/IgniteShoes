@@ -262,4 +262,11 @@ npx gluestack-ui add input
 npx gluestack-ui add pressable
 npx gluestack-ui add avatar
 npx gluestack-ui add image
+npx gluestack-ui add icon
+```
+
+Remove Deprecated Feather Icons
+Add [Lucide](https://lucide.dev/guide/packages/lucide-react-native) Icons
+```sh
+npm install lucide-react-native
 ```

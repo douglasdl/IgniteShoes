@@ -1,7 +1,13 @@
 import { Platform } from 'react-native'
 import { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { ScrollView, useToast } from 'native-base'
+import {
+  useToast,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+} from "@/components/ui/toast"
+import { ScrollView } from '@gluestack-ui/themed'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'
@@ -45,17 +51,35 @@ export function Details() {
       });
 
       toast.show({
-        title: 'Produto adicionado no carrinho',
         placement: 'top',
-        bgColor: 'green.500'
+        render: ({ id }) => {
+          const uniqueToastId = "toast-" + id
+          return (
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+              <ToastTitle>Produto adicionado no carrinho</ToastTitle>
+              <ToastDescription>
+                
+              </ToastDescription>
+            </Toast>
+          )
+        }
       });
 
       navigate('cart');
     } catch (error) {
       toast.show({
-        title: 'Não foi possível adicionar o produto no carrinho',
         placement: 'top',
-        bgColor: 'reed.500'
+        render: ({ id }) => {
+          const uniqueToastId = "toast-" + id
+          return (
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+              <ToastTitle>Não foi possível adicionar o produto no carrinho</ToastTitle>
+              <ToastDescription>
+                
+              </ToastDescription>
+          </Toast>
+          )
+        }
       });
     }
   }

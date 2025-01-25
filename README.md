@@ -263,6 +263,7 @@ npx gluestack-ui add pressable
 npx gluestack-ui add avatar
 npx gluestack-ui add image
 npx gluestack-ui add icon
+npx gluestack-ui add toast
 ```
 
 Remove Deprecated Feather Icons

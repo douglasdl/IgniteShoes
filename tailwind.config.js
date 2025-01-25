@@ -12,6 +12,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        green: {
+          700: '#00875F',
+          500: '#00B37E',
+        },
+        gray: {
+          700: '#121214',
+          600: '#202024',
+          500: '#29292E',
+          400: '#323238',
+          300: '#7C7C8A',
+          200: '#C4C4CC',
+          100: '#E1E1E6'
+        },
+        white: '#FFFFFF',
+        red: {
+          500: '#F75A68'
+        },
         primary: {
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',
@@ -168,7 +185,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: undefined,
+        heading: ['Roboto', 'sans-serif'],
         body: undefined,
         mono: undefined,
         roboto: ['Roboto', 'sans-serif'],
@@ -178,6 +195,19 @@ module.exports = {
       },
       fontSize: {
         '2xs': '10px',
+        xs: 12,
+        sm: 14,
+        md: 16,
+        lg: 18,
+        xl: 20,
+      },
+      fonts: {
+        heading: 'Roboto_700Bold',
+        body: 'Roboto_400Regular',
+      },
+      sizes: {
+        '14': 56,
+        '33': 148
       },
       boxShadow: {
         'hard-1': '-2px 2px 8px 0px rgba(38, 38, 38, 0.20)',

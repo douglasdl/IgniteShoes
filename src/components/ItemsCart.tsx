@@ -1,5 +1,11 @@
 import { HeaderList } from './HeaderList'
-import { FlatList, useToast } from 'native-base'
+import { FlatList } from 'native-base'
+import {
+  useToast,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+} from "@/components/ui/toast"
 import { VStack } from '@/components/ui/vstack'
 
 import { useCart } from '../hooks/useCart';
@@ -16,16 +22,34 @@ export function ItemsCart() {
       await removeProductCart(productId);
 
       toast.show({
-        title: 'Produto removido',
         placement: 'top',
-        bgColor: 'green.500'
+        render: ({ id }) => {
+          const uniqueToastId = "toast-" + id
+          return (
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+              <ToastTitle>Produto removido</ToastTitle>
+              <ToastDescription>
+                
+              </ToastDescription>
+            </Toast>
+          )
+        }
       });
 
     } catch (error) {
       toast.show({
-        title: 'Não foi possível remover o produto',
         placement: 'top',
-        bgColor: 'reed.500'
+        render: ({ id }) => {
+          const uniqueToastId = "toast-" + id
+          return (
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+              <ToastTitle>Não foi possível remover o produto</ToastTitle>
+              <ToastDescription>
+                
+              </ToastDescription>
+            </Toast>
+          )
+        }
       });
     }
   }

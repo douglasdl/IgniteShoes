@@ -1,9 +1,8 @@
-import { ImageSourcePropType, Platform } from 'react-native'
-import { IPressableProps } from 'native-base'
+import { ImageSourcePropType, Platform, PressableProps } from 'react-native'
 import { Pressable } from "@/components/ui/pressable"
 import { Image } from '@/components/ui/image'
 
-type Props = IPressableProps & {
+type Props = PressableProps & {
   image: ImageSourcePropType
   isActive: boolean
 }

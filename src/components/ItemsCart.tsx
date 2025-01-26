@@ -1,5 +1,5 @@
 import { HeaderList } from './HeaderList'
-import { FlatList } from 'native-base'
+import { FlatList } from '@gluestack-ui/themed'
 import {
   useToast,
   Toast,
@@ -12,6 +12,7 @@ import { useCart } from '../hooks/useCart';
 
 import { ItemCartCard } from './ItemCartCard';
 import { Button } from '../components/Button'
+import { StorageCartProps } from '../storage/storageCart';
 
 export function ItemsCart() {
   const { cart, removeProductCart } = useCart();
@@ -60,8 +61,8 @@ export function ItemsCart() {
 
       <FlatList
         data={cart}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => (
+        keyExtractor={(item: StorageCartProps) => item.id}
+        renderItem={({ item }: { item: StorageCartProps }) => (
           <ItemCartCard
             data={item}
             onRemove={() => handleItemRemove(item.id)}

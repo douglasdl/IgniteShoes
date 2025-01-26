@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native'
-import { FlatList } from 'native-base'
+import { FlatList } from '@gluestack-ui/themed'
 import { VStack } from '@/components/ui/vstack'
 import { HeaderList } from './HeaderList'
 
@@ -20,8 +20,8 @@ export function Products({ data, brand }: Props) {
 
       <FlatList
         data={data}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => (
+        keyExtractor={ (item: ProductCardProps) => item.id}
+        renderItem={({ item }: { item: ProductCardProps }) => (
                 <ProductCard 
                   data={item}
                   onPress={() => navigate('details', { productId: item.id })} 

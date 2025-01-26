@@ -1,12 +1,12 @@
-import { FlatList } from 'native-base'
+import { FlatList } from '@gluestack-ui/themed'
 import { VStack } from '@/components/ui/vstack'
 import { Heading } from '@/components/ui/heading'
 
 import { Size } from './Size';
 
 type Props = {
-  onSelect: (value: string) => void;
-  selected: string;
+  onSelect: (value: string) => void
+  selected: string
 }
 
 export function Sizes({ onSelect, selected }: Props) {
@@ -19,8 +19,8 @@ export function Sizes({ onSelect, selected }: Props) {
 
       <FlatList
         data={['35', '36', '37', '38', '39', '40', '41']}
-        keyExtractor={item => item}
-        renderItem={({ item }) => (
+        keyExtractor={(item: string) => item}
+        renderItem={({ item }: { item: string }) => (
           <Size
             size={item}
             isActive={selected === item}

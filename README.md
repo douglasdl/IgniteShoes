@@ -264,6 +264,8 @@ npx gluestack-ui add avatar
 npx gluestack-ui add image
 npx gluestack-ui add icon
 npx gluestack-ui add toast
+npm add @gluestack-style/react
+npm install nativewind @gluestack-ui/nativewind-utils tailwindcss
 ```
 
 Remove Deprecated Feather Icons

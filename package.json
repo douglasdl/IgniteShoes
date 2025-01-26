@@ -29,6 +29,7 @@
     "babel-plugin-module-resolver": "^5.0.2",
     "expo": "~52.0.25",
     "expo-dev-client": "~5.0.9",
+    "expo-dotenv": "^0.1.0",
     "expo-font": "~13.0.3",
     "expo-status-bar": "~2.0.1",
     "expo-updates": "~0.26.12",

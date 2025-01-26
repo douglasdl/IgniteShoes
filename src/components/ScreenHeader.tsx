@@ -15,7 +15,7 @@ export function ScreenHeader({ title }: Props) {
   return (
     <HStack className='bg-gray-600 pb-6 pt-16 justify-between px-6'>
       <Pressable onPress={goBack}>
-        <Icon as={ArrowLeftIcon} size="xs" color="green-500" />
+        <Icon as={ArrowLeftIcon} size="xs" className='text-green-500' />
       </Pressable>
 
 

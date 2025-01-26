@@ -16,12 +16,16 @@ type Props = {
 export function ItemCartCard({ data, onRemove }: Props) {
   return (
     <HStack className='w-full h-20 bg-gray-500 rounded-md items-center px-4 mb-2'>
-      <Image
-        className='w-16 h-16' 
-        source={data.image} 
-        alt="Imagem do produto" 
-        resizeMode={Platform.OS === "android" ? "contain" : "cover"} 
-      />
+      {
+        data.image && (
+          <Image
+            className='w-16 h-16' 
+            source={data.image} 
+            alt="Imagem do produto" 
+            resizeMode={Platform.OS === "android" ? "contain" : "cover"} 
+          />
+        )
+      }
 
       <VStack className='flex-1 ml-2'>
         <Heading className='text-white mt-2' size="lg">

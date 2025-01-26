@@ -17,7 +17,7 @@ export type ProductCardProps = {
 }
 
 type Props = TouchableOpacityProps & {
-  data: ProductCardProps;
+  data: ProductCardProps
 }
 
 export function ProductCard({ data, ...rest }: Props) {

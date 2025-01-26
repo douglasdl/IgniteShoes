@@ -7,7 +7,7 @@ import {
   ToastTitle,
   ToastDescription,
 } from "@/components/ui/toast"
-import { ScrollView } from '@gluestack-ui/themed'
+import { ScrollView } from 'react-native'
 import { VStack } from '@/components/ui/vstack'
 import { HStack } from "@/components/ui/hstack"
 import { Heading } from '@/components/ui/heading'

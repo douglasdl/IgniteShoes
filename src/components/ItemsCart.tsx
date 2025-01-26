@@ -1,5 +1,5 @@
 import { HeaderList } from './HeaderList'
-import { FlatList } from '@gluestack-ui/themed'
+import { FlatList } from 'react-native'
 import {
   useToast,
   Toast,
@@ -61,17 +61,18 @@ export function ItemsCart() {
 
       <FlatList
         data={cart}
-        keyExtractor={(item: StorageCartProps) => item.id}
-        renderItem={({ item }: { item: StorageCartProps }) => (
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
           <ItemCartCard
             data={item}
             onRemove={() => handleItemRemove(item.id)}
           />
         )}
-        _contentContainerStyle={{ alignItems: 'center', paddingBottom: 20 }}
         showsVerticalScrollIndicator={false}
-        px={8}
-        mt={2}
+        className='pb-20 px-8 mt-2'
+        contentContainerStyle={{
+          alignItems: "center"
+        }}
       />
 
       {

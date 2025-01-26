@@ -1,9 +1,9 @@
-import { IconButton, CloseIcon } from 'native-base'
-import { Icon } from '@/components/ui/icon'
+import { CloseIcon, Icon } from '@/components/ui/icon'
 import { HStack } from "@/components/ui/hstack"
 import { Text } from '@/components/ui/text'
 import { OSNotification } from 'react-native-onesignal'
 import { Bell } from "lucide-react-native"
+import { Button } from '@/components/ui/button'
 
 type Props = {
   data: OSNotification
@@ -19,14 +19,12 @@ export function Notification({ data, onClose }: Props) {
           {data.title}
         </Text>
 
-      <IconButton 
-        variant="unstyled" 
-        _focus={{ borderWidth: 0 }} 
-        icon={<CloseIcon size="3" />} 
-        _icon={{ color: "coolGray.600"}} 
-        color="black"
+      <Button
+        variant="outline"   
         onPress={onClose}
-      />
+      >
+        <CloseIcon />
+      </Button>
     </HStack>
   )
 }

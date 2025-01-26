@@ -4,6 +4,7 @@ import { HomeIcon, ShoppingBag } from "lucide-react-native"
 import { Cart } from '../screens/Cart'
 import { Home } from '../screens/Home'
 import { Details } from '../screens/Details'
+import colors from "tailwindcss/colors"
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -14,11 +15,11 @@ export function AppRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "green-500",
-        tabBarInactiveTintColor: "gray-300",
+        tabBarActiveTintColor: colors.green[500],
+        tabBarInactiveTintColor: colors.gray[300],
         tabBarStyle: {
           borderTopWidth: 0,
-          backgroundColor: "gray-800"
+          backgroundColor: colors.gray[800]
         },
       }}>
       <Screen

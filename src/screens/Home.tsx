@@ -19,7 +19,7 @@ export function Home() {
   }, [brandSelected])
 
   return (
-    <VStack className='flex-1'>
+    <VStack className='flex-1 bg-gray-700'>
       <HomeHeader />
       <Brands onSelect={setBrandSelected} selected={brandSelected} />
       <Products brand={brandSelected} data={products} />

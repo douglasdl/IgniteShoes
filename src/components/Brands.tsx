@@ -1,4 +1,4 @@
-import { FlatList } from '@gluestack-ui/themed'
+import { FlatList } from 'react-native'
 import { Brand } from './Brand'
 import { BRANDS, BrandProps } from '../data/brands'
 import { ImageSourcePropType } from 'react-native'
@@ -26,8 +26,7 @@ export function Brands({ onSelect, selected }: Props) {
       }}
       horizontal
       showsHorizontalScrollIndicator={false}
-      className='mt-10 maxh10 min-h-10'
-      paddingHorizontal={8}
+      className='mt-10 max-h-10 min-h-10 px-8'
     />
   );
 }

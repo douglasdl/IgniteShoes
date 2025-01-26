@@ -1,4 +1,4 @@
-import { FlatList } from '@gluestack-ui/themed'
+import { FlatList } from 'react-native'
 import { VStack } from '@/components/ui/vstack'
 import { Heading } from '@/components/ui/heading'
 
@@ -29,9 +29,7 @@ export function Sizes({ onSelect, selected }: Props) {
         )}
         horizontal
         showsHorizontalScrollIndicator={false}
-        _contentContainerStyle={{ pr: 8 }}
-        maxH={10}
-        minH={10}
+        className='pr-8 max-h-10 min-h-10'
       />
     </VStack>
   );

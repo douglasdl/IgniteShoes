@@ -27,8 +27,8 @@ export function HomeHeader() {
 
       <Icon
         as={LogOut}
-        color="gray-200"
         size="lg"
+        className='text-gray-200'
       />
     </HStack>
   )

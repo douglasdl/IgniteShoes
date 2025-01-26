@@ -269,7 +269,7 @@ npm install nativewind @gluestack-ui/nativewind-utils tailwindcss
 ```
 
 Remove Deprecated Feather Icons
-Add [Lucide](https://lucide.dev/guide/packages/lucide-react-native) Icons
+Add [Lucide](https://lucide.dev/guide/packages/lucide-react-native) Icons ([icons list](https://lucide.dev/icons/)).
 ```sh
 npm install lucide-react-native
 ```

@@ -23,11 +23,11 @@ type Props = TouchableOpacityProps & {
 export function ProductCard({ data, ...rest }: Props) {
   return (
     <TouchableOpacity {...rest}>
-      <VStack className='w-40 h-40 bg-gray-500 rounded-md items-center p-2 m-2'>
+      <VStack className='w-48 h-48 bg-gray-500 rounded-md items-center p-2 m-2'>
         <Image 
           source={data.thumb} 
           alt="Imagem do produto" 
-          className='flex-1' 
+          className='flex-1 w-full' 
           resizeMode="cover" 
         />
 

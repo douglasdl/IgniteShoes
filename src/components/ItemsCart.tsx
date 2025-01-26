@@ -1,5 +1,5 @@
 import { HeaderList } from './HeaderList'
-import { FlatList } from 'react-native'
+import { FlatList, View } from 'react-native'
 import {
   useToast,
   Toast,
@@ -27,11 +27,8 @@ export function ItemsCart() {
         render: ({ id }) => {
           const uniqueToastId = "toast-" + id
           return (
-            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid" className='bg-green-500 top-20'>
               <ToastTitle>Produto removido</ToastTitle>
-              <ToastDescription>
-                
-              </ToastDescription>
             </Toast>
           )
         }
@@ -43,11 +40,8 @@ export function ItemsCart() {
         render: ({ id }) => {
           const uniqueToastId = "toast-" + id
           return (
-            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid" className='bg-red-500 top-20'>
               <ToastTitle>Não foi possível remover o produto</ToastTitle>
-              <ToastDescription>
-                
-              </ToastDescription>
             </Toast>
           )
         }
@@ -56,7 +50,7 @@ export function ItemsCart() {
   }
 
   return (
-    <VStack className='flex-1'>
+    <VStack className='flex-1 justify-between h-full'>
       <HeaderList title="Produtos" counter={cart.length} />
 
       <FlatList
@@ -77,7 +71,9 @@ export function ItemsCart() {
 
       {
         cart.length > 0 &&
-        <Button title="Finalizar compra" />
+        <View className='w-full h-20 px-8'>
+          <Button title="Finalizar compra" />
+        </View>
       }
     </VStack>
   );

@@ -29,7 +29,6 @@ export function Products({ data, brand }: Props) {
         )}
         numColumns={2}
         showsVerticalScrollIndicator={false}
-        className='pb-20'
         contentContainerStyle={{
           alignItems: "center",
           paddingBottom: 20

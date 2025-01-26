@@ -38,7 +38,7 @@ export function ItemCartCard({ data, onRemove }: Props) {
       </VStack>
 
       <TouchableOpacity onPress={onRemove}>
-        <Icon as={TrashIcon} size="xs" color="red-500" />
+        <Icon as={TrashIcon} size="md" className='text-red-500' />
       </TouchableOpacity>
     </HStack>
   );

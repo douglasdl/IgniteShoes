@@ -55,11 +55,8 @@ export function Details() {
         render: ({ id }) => {
           const uniqueToastId = "toast-" + id
           return (
-            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid" className='bg-green-500 top-20'>
               <ToastTitle>Produto adicionado no carrinho</ToastTitle>
-              <ToastDescription>
-                
-              </ToastDescription>
             </Toast>
           )
         }
@@ -72,11 +69,8 @@ export function Details() {
         render: ({ id }) => {
           const uniqueToastId = "toast-" + id
           return (
-            <Toast nativeID={uniqueToastId} action="muted" variant="solid">
+            <Toast nativeID={uniqueToastId} action="muted" variant="solid" className='bg-red-500 top-20'>
               <ToastTitle>Não foi possível adicionar o produto no carrinho</ToastTitle>
-              <ToastDescription>
-                
-              </ToastDescription>
           </Toast>
           )
         }
@@ -90,17 +84,19 @@ export function Details() {
   }, [productId]);
 
   return (
-    <VStack className='flex-1'>
+    <VStack className='flex-1 bg-gray-700 text-white'>
       <ScreenHeader title="Detalhes do Produto" />
 
       <ScrollView>
-        <Image
-          key={String(new Date().getTime())}
-          source={product.image}
-          className='w-56 h-56 self-center'
-          resizeMode={Platform.OS === "android" ? "contain" : "cover"}
-          alt="Imagem do produto"
-        />
+        {product.image && (
+          <Image
+            key={String(new Date().getTime())}
+            source={product.image}
+            className='w-56 h-56 self-center'
+            resizeMode={Platform.OS === "android" ? "contain" : "cover"}
+            alt="Imagem do produto"
+          />
+        )}
 
         <VStack className='p-6'>
           <HStack className='w-full justify-between items-center'>

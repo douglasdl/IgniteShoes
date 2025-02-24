@@ -5,10 +5,12 @@ import { Cart } from '../screens/Cart'
 import { Home } from '../screens/Home'
 import { Details } from '../screens/Details'
 import colors from "tailwindcss/colors"
+import { useCart } from '../hooks/useCart'
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppRoutes() {
+  const { cart } = useCart();
   
   return (
     <Navigator
@@ -35,6 +37,7 @@ export function AppRoutes() {
         component={Cart}
         options={{
           tabBarIcon: ({ color }) => <Icon as={ShoppingBag} color={color} size="md" />,
+          tabBarBadge: cart.length > 0 ? cart.length : undefined 
         }}
       />
 

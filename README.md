@@ -290,17 +290,17 @@ Install the dependencies:
 npx expo install expo-linking
 ```
 
-#### 
+#### Abandoned Cart Concept
 
-#### 
+#### Create tag for the Cart
 
-#### 
+#### Remove the item from the cart
 
-#### 
+#### Create Abandonated Cart Segment
 
-#### 
+#### Sending Notifications for a Segment
 
-#### 
+#### Add Badge in the Menu
 
 #### Module Ending
 

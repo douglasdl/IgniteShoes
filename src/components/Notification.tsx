@@ -5,29 +5,20 @@ import { OSNotification } from 'react-native-onesignal'
 import { Bell, XIcon } from "lucide-react-native"
 import { Button } from '@/components/ui/button'
 import { Pressable } from '@/components/ui/pressable'
-import { useNavigation } from '@react-navigation/native'
 import { View } from 'react-native'
+import * as Linking from 'expo-linking'
 
 type Props = {
   data: OSNotification
   onClose: () => void
 }
 
-type AdditionalDataProps = {
-  route?: string
-  product_id?: string
-}
-
 export function Notification({ data, onClose }: Props) {
-  const { navigate } = useNavigation()
 
   function handleOnPress() {
-    const { route, product_id } = data.actionButtons as AdditionalDataProps
-    console.log(route, product_id)
-
-    if(route === "details" && product_id) {
-      navigate("details", { productId: product_id })
-      onClose()
+    if(data.launchURL) {
+      Linking.openURL(data.launchURL);
+      onClose();
     }
   }
 

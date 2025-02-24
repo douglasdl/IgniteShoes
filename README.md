@@ -211,20 +211,98 @@ npx expo run:ios
 - Background
 - Quit
 
-####
+#### Receive a Foreground message
 
-####
+#### Using the Notification component
 
-####
+#### Send Data in the Notification
 
-####
+#### Check the click in the background Notificação
+
+#### Add Action Buttons
+
+#### Gete the Selected Option
+
+#### Messages Delivery Schedule
 
 #### Add
 
 ### 7) Deep Linking
 
+#### Starting [Deep Linking](https://reactnavigation.org/docs/deep-linking/)
 
+#### Add and List Schemes
 
+Add the Schema config to the native codes:
+```sh
+npx expo prebuild
+```
+
+Show the scheme:
+```sh
+npx uri-scheme list
+```
+
+```sh
+ iOS: Schemes for config: ./ios/igniteshoesapp/Info.plist
+› igniteshoesapp://
+› com.douglasdl87.igniteshoesapp://
+› exp+igniteshoesapp://
+
+› Android: Schemes for config: ./android/app/src/main/AndroidManifest.xml
+› com.douglasdl87.igniteshoesapp://
+› com.lojaoshop.igniteshoes://
+› igniteshoesapp://
+› exp+igniteshoesapp://
+```
+
+```sh
+npx expo run:android
+```
+
+#### Run the Deep Linking
+
+Open the app using the deeplink:
+```sh
+npx uri-scheme open igniteshoesapp://192.168.3.105:8081 --android
+```
+
+#### Config the Depp Linking Navigation
+
+List the scheme:
+```sh
+npx uri-scheme list
+```
+
+Open the details page using Depp Linking:
+```sh
+npx uri-scheme open igniteshoesapp://details/7 --ios
+```
+
+#### Deep Linking in the Push Notification
+
+#### Deep Linking with parameters in the Push Notification
+
+#### Handle the Deep Linking with the App in foreground
+
+Install the dependencies:
+```sh
+npx expo install expo-linking
+```
+
+#### 
+
+#### 
+
+#### 
+
+#### 
+
+#### 
+
+#### 
+
+#### Module Ending
 
 Publish:
 ```sh
